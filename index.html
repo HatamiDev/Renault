@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="./image/renault.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="./public/main.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./public/css/main.css">
+
+
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+
+
+
+
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+      <!-- logo -->
+      <div class="flex items-center gap-3">
+        <svg id="renaultLogo" viewBox="0 0 66 86" class="w-20 h-20 fill-white transition-all duration-300">
+          <path
+            d="m52.3 43-23 43H23L0 43 22.9 0h6.5L6.5 43l19.6 36.9L45.7 43 34.3 21.5l3.3-6.1L52.3 43zM42.5 0h-6.6L13.1 43l14.7 27.6 3.2-6.1L19.6 43 39.2 6l19.6 37-22.9 43h6.6l22.8-43L42.5 0z">
+          </path>
+        </svg>
+
+        <span class="text-2xl font-bold tracking-wide">RENAULT</span>
+      </div>
+
+
+      <nav class="hidden lg:flex items-center gap-10 text-sm font-light capitalize">
+        <a class="hover:text-yellow-400 transition">vehicles</a>
+        <a class="hover:text-yellow-400 transition">Your profession, our solutions</a>
+        <a class="hover:text-yellow-400 transition">purchase</a>
+        <a class="hover:text-yellow-400 transition">maintenance & services</a>
+      </nav>
+
+      <!-- icons-->
+      <div class="flex items-center gap-8">
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg animate__animated animate__fadeInDown">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M15.51 4.055a8.105 8.105 0 0 1 .625 11.23l5.79 5.79-.85.85-5.79-5.79a8.105 8.105 0 1 1 .224-12.08zM10 3.1a6.9 6.9 0 1 0 0 13.8 6.9 6.9 0 0 0 0-13.8"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Search</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg animate__animated animate__fadeInDown animate__delay-2s">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path
+                d="M13.9 6h1.2V5A2.965 2.965 0 0 0 12 1.9 2.965 2.965 0 0 0 8.9 5v1h1.2V5A1.765 1.765 0 0 1 12 3.1 1.765 1.765 0 0 1 13.9 5z"
+                fill="#FFFFFF"></path>
+              <path fill-rule="evenodd"
+                d="M3.81 22.1 6 6.9h12l2.19 15.2zm14.45-5.2L17 8.1H7l-1.24 8.8zm-13.07 4 .4-2.8h12.82l.4 2.8z"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Shop</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg animate__animated animate__fadeInDown animate__delay-3s">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M12 12.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2M9.6 9a2.4 2.4 0 1 1 4.8 0 2.4 2.4 0 0 1-4.8 0"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+              <path fill-rule="evenodd"
+                d="m11.03 22.875.18.225h1.58l.18-.225C17.7 16.96 20.1 12.29 20.1 9A8.1 8.1 0 0 0 3.9 9c0 3.29 2.4 7.96 7.13 13.875M18.9 9c0 2.97-2.25 7.31-6.69 12.9h-.42C7.35 16.31 5.1 11.97 5.1 9a6.9 6.9 0 0 1 13.8 0"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Location</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg animate__animated animate__fadeInDown animate__delay-4s">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M11.37 22.105h1.26l1.24-2.505 6.09.045A2.145 2.145 0 0 0 22.1 17.5V4.04a2.145 2.145 0 0 0-2.14-2.145H4.04A2.145 2.145 0 0 0 1.9 4.04V17.5a2.15 2.15 0 0 0 2.145 2.145l6.085-.04zM12 20.67l-1.13-2.275-6.83.05a.945.945 0 0 1-.94-.945V4.04c0-.52.42-.942.94-.945h15.92c.52.003.94.425.94.945V17.5a.945.945 0 0 1-.94.94l-6.83-.045z"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Contact</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg animate__animated animate__fadeInDown animate__delay-5s">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M17.35 6.745A5.06 5.06 0 0 1 14.95 11c3.945 1.03 6.15 4.275 6.15 9.245v1.5h-1.2v-1.5c0-7.31-4.95-8.4-7.9-8.4s-7.9 1.09-7.9 8.4v1.5H2.9v-1.5C2.9 15.27 5.105 12 9.05 11a5.06 5.06 0 0 1-2.4-4.25A5.235 5.235 0 0 1 12 1.65a5.235 5.235 0 0 1 5.35 5.095M12 2.85a4.035 4.035 0 0 0-4.15 3.9 4.035 4.035 0 0 0 4.15 3.9 4.035 4.035 0 0 0 4.15-3.9A4.035 4.035 0 0 0 12 2.85"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>My Renault</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- ================= NAVBAR-END ================= -->
+
+  <section class="relative w-full h-screen overflow-hidden">
+
+    <div class="swiper mySwiper w-full h-full">
+
+      <div class="swiper-wrapper ">
+
+        <div class="swiper-slide " data-title="RENAULT PRO+ GENERATION " data-desc="Custom-built commercial vehicles">
+          <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+            <source src="./image/e797a3a1cb.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="swiper-slide" data-title="NEW CLIO" data-desc="The next generation of urban mobility">
+          <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+            <source src="./image/ed0d579da0.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="swiper-slide" data-title="ELECTRIC RANGE" data-desc="Drive the future with zero emissions">
+          <img src="./image/1.png" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="swiper-slide" data-title="FISCALITY 2026" data-desc="New regulations for business vehicles">
+          <img src="./image/2.png" class="w-full h-full object-cover" />
+        </div>
+
+      </div>
+
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <!-- متن  -->
+    <div id="sliderText" class="absolute z-20 top-1/3 left-10 max-w-xl transition-all duration-500">
+      <p id="sliderTitle" class="text-sm tracking-widest uppercase opacity-90 ml-20"></p>
+      <h1 id="sliderDesc" class="text-3xl md:text-5xl font-semibold leading-tight mt-3 ml-20"></h1>
+      <button
+        class="btn bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 mt-6 ml-20 capitalize">
+        discover
+      </button>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ================= SERVICES ================= -->
+  <section class="w-full bg-black text-white py-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+
+      <!-- ردیف اول -->
+      <div class="relative group overflow-hidden rounded-xl cursor-pointer md:col-span-2 h-80 ">
+        <img src="./image/11.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+
+        <div class="absolute bottom-[180PX] left-6">
+          <h3 class="text-xl font-semibold mb-2">trade-in of your vehicle</h3>
+          <p class="text-sm opacity-80 mb-4">Estimate the value of your vehicle in less than 3 minutes</p>
+
+          <div class="flex items-center gap-2">
+            <input type="text" placeholder="2026/01/01"
+              class="input input-bordered input-sm bg-white/90 text-black rounded-md w-32" />
+            <button class="btn btn-sm bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-300">
+              OK
+            </button>
+          </div>
+
+          <a class="text-xs underline opacity-80 hover:opacity-100 mt-2 inline-block">
+            You do not know your registration number
+          </a>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-xl cursor-pointer h-80">
+        <img src="./image/22.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+
+        <div class="absolute bottom-[260PX] left-6">
+          <h3 class="text-xl font-semibold mb-2">our Renault Pro+ commitments</h3>
+        </div>
+      </div>
+
+      <!-- ردیف دوم -->
+      <div class="relative group overflow-hidden rounded-xl cursor-pointer h-80">
+        <img src="./image/33.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+
+        <div class="absolute bottom-[260PX] left-6">
+          <h3 class="text-xl font-semibold mb-2">book an appointment at the workshop</h3>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-xl cursor-pointer md:col-span-2 h-80">
+        <img src="./image/44.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+
+        <div class="absolute bottom-[260PX] left-6">
+          <h3 class="text-xl font-semibold mb-2">My Renault is with you every day</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- ویدیو پس‌زمینه -->
+  <video id="bgVideo" class="fixed inset-0 w-full h-full object-cover -z-10 transition-opacity duration-500" autoplay
+    muted loop playsinline>
+  </video>
+
+  <!-- اوورلی -->
+  <div class="fixed inset-0 bg-black/40 -z-10"></div>
+
+  <!-- کانتینر سکشن‌ها -->
+  <div class="relative w-full">
+
+    <!-- سکشن ۱ -->
+    <section class="min-h-screen flex items-start justify-end pr-24 pt-40" data-video="videos/1scrol.mp4">
+      <div class="section-content sticky top-40 transition-all duration-500">
+        <h2 class="text-5xl font-bold mb-4 section-title opacity-100">Electrified E-Tech drives</h2>
+        <p class="text-lg opacity-80 max-w-md section-desc">
+          E-Tech powertrains offer three levels of electrification: fully electric, self-charging full hybrid, and hyper
+          hybrid plug-in. Enjoy economical and environmentally friendly high-performance alternatives for everyday life.
+        </p>
+      </div>
+    </section>
+
+    <!-- سکشن ۲ -->
+    <section class="min-h-screen flex items-start justify-end pr-24 pt-40" data-video="./videos/2scrol.mp4">
+      <div class="section-content sticky top-40 transition-all duration-500">
+        <h2 class="text-5xl font-bold mb-4 section-title opacity-40">OpenR link with Google integration</h2>
+        <p class="text-lg opacity-80 max-w-md section-desc hidden">
+          Discover OpenR link with Google integration*: Real-time navigation, voice control, and over 50 apps**. An
+          intuitive, fast, and fully customizable interface.
+        </p>
+      </div>
+    </section>
+
+    <!-- سکشن ۳ -->
+    <section class="min-h-screen flex items-start justify-end pr-24 pt-40" data-video="./videos/3scrol.mp4">
+      <div class="section-content sticky top-40 transition-all duration-500">
+        <h2 class="text-5xl font-bold mb-4 section-title opacity-40">"Human First" program, safety by Renault</h2>
+        <p class="text-lg opacity-80 max-w-md section-desc hidden">
+          As part of the “Human First” program, Renault, together with researchers, experts and firefighters, conducts
+          comprehensive tests and exercises to strengthen the daily safety of all road users.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- TOP LINKS -->
+  <div class="w-full bg-black text-white py-6 ">
+    <div
+      class="w-full max-w-4xl mx-auto flex flex-wrap mt-[200px] justify-center items-center gap-10 px-6 text-lg font-normal">
+
+      <a class="top-link cursor-pointer transition capitalize">new vehicle offers</a>
+      <a class="top-link cursor-pointer transition capitalize">new vehicles in stock</a>
+      <a class="top-link cursor-pointer transition capitalize">trade-in of your vehicle</a>
+      <a class="top-link cursor-pointer transition capitalize">maintenance quote</a>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <section class="w-full py-16 bg-black text-white">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-6 capitalize">
+
+      <!-- cart1 -->
+      <div class="relative rounded-xl overflow-hidden h-[600px]">
+        <img src="./image/grid/1.png" class="absolute inset-0 w-full h-full object-cover" />
+
+        <!-- متن بالا-چپ -->
+        <div class="absolute top-0 left-0 p-8 max-w-sm">
+          <h2 class="text-3xl font-bold mb-3">commercial vehicles</h2>
+          <p class="text-sm opacity-90 mb-5">
+            Van, tipper, pickup truck: discover our models, their engines and layouts adapted to your profession
+          </p>
+
+          <div class="flex gap-3 ">
+            <button class="btn btn-sm bg-white text-black rounded-full px-5 capitalize">view the range</button>
+            <button class="btn btn-sm bg-transparent border border-white capitalize rounded-full px-5">view
+              offers</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- cart2 -->
+      <div class="relative rounded-xl overflow-hidden h-[600px]">
+        <img src="./image/grid/2.png" class="absolute inset-0 w-full h-full object-cover" />
+
+
+
+        <div class="absolute top-0 left-0 p-8 max-w-sm">
+          <h2 class="text-3xl font-bold mb-3">society vehicles</h2>
+          <p class="text-sm opacity-90 mb-5">
+            from the city car to the 7-passenger highway vehicle, discover our society vehicles and their electric,
+            hybrid, LPG and gasoline motorizations
+          </p>
+
+          <div class="flex gap-3">
+            <button class="btn btn-sm bg-white text-black rounded-full px-5 capitalize">view the range</button>
+            <button class="btn btn-sm bg-transparent border border-white rounded-full px-5 capitalize">view
+              offers</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- cart3 -->
+      <div class="relative rounded-xl overflow-hidden h-[600px]">
+        <img src="./image/grid/3.png" class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="absolute top-0 left-0 p-8 max-w-sm">
+          <h2 class="text-3xl font-bold mb-3">E-Tech electric range</h2>
+          <p class="text-sm opacity-90 mb-5">
+            For commercial or company vehicles, discover our electric range and enjoy CO₂-free driving.
+          </p>
+
+          <div class="flex gap-3">
+            <button class="btn btn-sm bg-white text-black rounded-full px-5 capitalize">view the range</button>
+            <button class="btn btn-sm bg-transparent border border-white capitalize rounded-full px-5">view
+              offers</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- cart4 -->
+      <div class="relative rounded-xl overflow-hidden h-[600px]">
+        <img src="./image/grid/4.png" class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="absolute top-0 left-0 p-8 max-w-sm">
+          <h2 class="text-3xl font-bold mb-3">Your profession, our solutions</h2>
+          <p class="text-sm opacity-90 mb-5">
+            Our vehicles can be adapted to a wide range of missions; discover the available transformations.
+          </p>
+
+          <div class="flex gap-3">
+            <button class="btn btn-sm bg-white text-black rounded-full px-5 capitalize">learn more</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- cart5 -->
+      <div class="relative rounded-xl overflow-hidden h-[600px]">
+        <img src="./image/grid/5.png" class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="absolute top-0 left-0 p-8 max-w-sm">
+          <h2 class="text-3xl font-bold mb-3">funding</h2>
+          <p class="text-sm opacity-90 mb-5">
+            Long-term rental or leasing: compare our rental offers for your commercial or company vehicle
+          </p>
+
+          <div class="flex gap-3">
+            <button class="btn btn-sm bg-white text-black rounded-full px-5 capitalize">choose your financing</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- cart6 -->
+      <div class="relative rounded-xl overflow-hidden h-[600px]">
+        <img src="./image/grid/6.png" class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="absolute top-0 left-0 p-8 max-w-sm">
+          <h2 class="text-3xl font-bold mb-3">used vehicles</h2>
+          <p class="text-sm opacity-90 mb-5">
+            Discover our selection of used vehicles of all makes, refurbished and certified, and our warranties.
+          </p>
+
+          <div class="flex gap-3">
+            <button class="btn btn-sm bg-white text-black rounded-full px-5 capitalize">access renew</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <footer class="w-full bg-black text-white pt-16 pb-10">
+
+    <!-- GRID TOP -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+
+      <!-- COL 1 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+          TRY THE MODEL OF YOUR CHOICE
+        </h3>
+
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a class="hover:opacity-100 transition">book a test drive</a></li>
+          <li><a class="hover:opacity-100 transition">configure your vehicle</a></li>
+          <li><a class="hover:opacity-100 transition">download a brochure</a></li>
+          <li><a class="hover:opacity-100 transition">discover all our offers</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 2 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+          RENAULT EXPERTS AT YOUR SIDE
+        </h3>
+
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a class="hover:opacity-100 transition">contact us</a></li>
+          <li><a class="hover:opacity-100 transition">FAQ</a></li>
+          <li><a class="hover:opacity-100 transition">My Renault</a></li>
+          <li><a class="hover:opacity-100 transition">accessibility</a></li>
+          <li><a class="hover:opacity-100 transition">order a certificate</a></li>
+          <li><a class="hover:opacity-100 transition">recall campaigns</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+          TAILOR-MADE FINANCING SOLUTIONS
+        </h3>
+
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a class="hover:opacity-100 transition">funding options</a></li>
+          <li><a class="hover:opacity-100 transition">leasing</a></li>
+          <li><a class="hover:opacity-100 transition">insurance</a></li>
+          <li><a class="hover:opacity-100 transition">financial services</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+          SEARCH OUR SITE
+        </h3>
+
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a class="hover:opacity-100 transition">used vehicles</a></li>
+          <li><a class="hover:opacity-100 transition">trade-in value</a></li>
+          <li><a class="hover:opacity-100 transition">charging & battery</a></li>
+          <li><a class="hover:opacity-100 transition">vehicle recycling</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="max-w-7xl mx-auto  px-6">
+      <h3 class="text-lg font-semibold mb-4">let's stay connected</h3>
+    </div>
+    <div class="max-w-7xl mx-auto  px-6 flex flex-wrap gap-10 items-center">
+      <a href="https://www.instagram.com/mehranhatami_?igsh=cmd3bHdhYmw0ajZ4">
+        <svg class="w-[60px] h-auto fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.5833 264.5833"
+          fill="white">
+          <path
+            d="M132.3452 33.973c-26.7167 0-30.0696.1167-40.5629.5939-10.4727.4792-17.6212 2.136-23.8762 4.567-6.4701 2.5107-11.9586 5.8693-17.4265 11.3352-5.472 5.464-8.8332 10.9483-11.354 17.4116-2.4389 6.2524-4.099 13.3976-4.5703 23.8585-.4693 10.4854-.5923 13.8379-.5923 40.5348 0 26.697.1189 30.0371.5943 40.5225.4817 10.465 2.1397 17.6082 4.5703 23.8585 2.5147 6.4654 5.8758 11.9497 11.3458 17.4136 5.466 5.468 10.9544 8.8349 17.4204 11.3456 6.259 2.4309 13.4097 4.0877 23.8803 4.567 10.4933.477 13.8441.5938 40.5588.5938 26.7188 0 30.0615-.1167 40.5547-.5939 10.4728-.4792 17.6295-2.136 23.8885-4.567 6.4681-2.5106 11.9484-5.8775 17.4143-11.3455 5.472-5.4639 8.8332-10.9482 11.354-17.4115 2.4183-6.2524 4.0784-13.3976 4.5703-23.8585.4713-10.4854.5943-13.8277.5943-40.5246 0-26.697-.123-30.0473-.5943-40.5328-.4919-10.465-2.152-17.6081-4.5703-23.8584-2.5208-6.4654-5.882-11.9498-11.354-17.4137-5.4721-5.468-10.9442-8.8266-17.4204-11.3353-6.2714-2.4309-13.424-4.0877-23.8967-4.5669-10.4933-.4772-13.8339-.5939-40.5588-.5939zm-8.825 17.7147c2.6193-.0041 5.5418 0 8.825 0 26.2659 0 29.379.0942 39.7513.5652 9.5915.4383 14.7971 2.0397 18.2648 3.3852 4.5908 1.7817 7.8638 3.9116 11.3048 7.3521 3.4431 3.4406 5.5745 6.7173 7.3617 11.3046 1.3465 3.461 2.9512 8.6628 3.3877 18.2472.4714 10.3625.5739 13.4754.5739 39.7095 0 26.234-.1025 29.347-.5739 39.7095-.4386 9.5843-2.0412 14.7861-3.3877 18.2471-1.783 4.5874-3.9186 7.8539-7.3617 11.2923-3.443 3.4406-6.712 5.5704-11.3048 7.3521-3.4636 1.3517-8.6733 2.949-18.2648 3.3873-10.3702.471-13.4854.5734-39.7513.5734-26.2679 0-29.381-.1024-39.7513-.5734-9.5914-.4423-14.797-2.0438-18.2668-3.3893-4.5908-1.7817-7.87-3.9116-11.313-7.3521-3.4431-3.4405-5.5745-6.709-7.3617-11.2985-1.3465-3.461-2.9512-8.6628-3.3877-18.2471-.4714-10.3626-.5657-13.4754-.5657-39.7259 0-26.2504.0943-29.347.5657-39.7095.4386-9.5844 2.0412-14.7861 3.3877-18.2512 1.783-4.5874 3.9186-7.8641 7.3617-11.3046 3.443-3.4406 6.7222-5.5704 11.313-7.3562 3.4677-1.3517 8.6754-2.949 18.2668-3.3894 9.075-.4096 12.5919-.5324 30.9264-.553zm61.3363 16.322c-6.5173 0-11.805 5.2776-11.805 11.792 0 6.5125 5.2877 11.7962 11.805 11.7962 6.5172 0 11.8049-5.2837 11.8049-11.7962 0-6.5124-5.2877-11.796-11.805-11.796zm-52.5113 13.7826c-27.8993 0-50.5191 22.6031-50.5191 50.4817 0 27.8786 22.6198 50.4714 50.5191 50.4714s50.511-22.5928 50.511-50.4714c0-27.8786-22.6137-50.4817-50.513-50.4817zm0 17.7147c18.109 0 32.7914 14.6694 32.7914 32.767 0 18.0956-14.6824 32.767-32.7914 32.767-18.111 0-32.7913-14.6714-32.7913-32.767 0-18.0976 14.6803-32.767 32.7913-32.767z" />
+        </svg>
+      </a>
+
+      <a href="https://wa.me/message/RPY6ALW2ZHI3D1">
+        <svg width="50" height="50" viewBox="0 0 360 362" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M307.546 52.5655C273.709 18.685 228.706 0.0171895 180.756 0C81.951 0 1.53846 80.404 1.50408 179.235C1.48689 210.829 9.74646 241.667 25.4319 268.844L0 361.736L95.0236 336.811C121.203 351.096 150.683 358.616 180.679 358.625H180.756C279.544 358.625 359.966 278.212 360 179.381C360.017 131.483 341.392 86.4547 307.546 52.5741V52.5655ZM180.756 328.354H180.696C153.966 328.346 127.744 321.16 104.865 307.589L99.4242 304.358L43.034 319.149L58.0834 264.168L54.5423 258.53C39.6304 234.809 31.749 207.391 31.7662 179.244C31.8006 97.1036 98.6334 30.2707 180.817 30.2707C220.61 30.2879 258.015 45.8015 286.145 73.9665C314.276 102.123 329.755 139.562 329.738 179.364C329.703 261.513 262.871 328.346 180.756 328.346V328.354ZM262.475 216.777C257.997 214.534 235.978 203.704 231.869 202.209C227.761 200.713 224.779 199.966 221.796 204.452C218.814 208.939 210.228 219.029 207.615 222.011C205.002 225.002 202.389 225.372 197.911 223.128C193.434 220.885 179.003 216.158 161.891 200.902C148.578 189.024 139.587 174.362 136.975 169.875C134.362 165.389 136.7 162.965 138.934 160.739C140.945 158.728 143.412 155.505 145.655 152.892C147.899 150.279 148.638 148.406 150.133 145.423C151.629 142.432 150.881 139.82 149.764 137.576C148.646 135.333 139.691 113.287 135.952 104.323C132.316 95.5909 128.621 96.777 125.879 96.6309C123.266 96.5019 120.284 96.4762 117.293 96.4762C114.302 96.4762 109.454 97.5935 105.346 102.08C101.238 106.566 89.6691 117.404 89.6691 139.441C89.6691 161.478 105.716 182.785 107.959 185.776C110.202 188.767 139.544 234.001 184.469 253.408C195.153 258.023 203.498 260.782 210.004 262.845C220.731 266.257 230.494 265.776 238.212 264.624C246.816 263.335 264.71 253.786 268.44 243.326C272.17 232.866 272.17 223.893 271.053 222.028C269.936 220.163 266.945 219.037 262.467 216.794L262.475 216.777Z"
+            fill="#FFFFFF" />
+        </svg>
+      </a>
+      <a href="https://t.me/Sitebymehran">
+        <svg class="w-[60px] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+          <defs>
+            <linearGradient id="linear-gradient" x1="120" y1="240" x2="120" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FFFFFF" />
+              <stop offset="1" stop-color="" />
+            </linearGradient>
+          </defs>
+
+          <circle cx="120" cy="120" r="120" fill="url(#linear-gradient)" />
+          <path
+            d="M81.229,128.772l14.237,39.406s1.78,3.687,3.686,3.687,30.255-29.492,30.255-29.492l31.525-60.89L81.737,118.6Z"
+            fill="#c8daea" />
+          <path d="M100.106,138.878l-2.733,29.046s-1.144,8.9,7.754,0,17.415-15.763,17.415-15.763" fill="#a9c6d8" />
+          <path
+            d="M81.486,130.178,52.2,120.636s-3.5-1.42-2.373-4.64c.232-.664.7-1.229,2.1-2.2,6.489-4.523,120.106-45.36,120.106-45.36s3.208-1.081,5.1-.362a2.766,2.766,0,0,1,1.885,2.055,9.357,9.357,0,0,1,.254,2.585c-.009.752-.1,1.449-.169,2.542-.692,11.165-21.4,94.493-21.4,94.493s-1.239,4.876-5.678,5.043A8.13,8.13,0,0,1,146.1,172.5c-8.711-7.493-38.819-27.727-45.472-32.177a1.27,1.27,0,0,1-.546-.9c-.093-.469.417-1.05.417-1.05s52.426-46.6,53.821-51.492c.108-.379-.3-.566-.848-.4-3.482,1.281-63.844,39.4-70.506,43.607A3.21,3.21,0,0,1,81.486,130.178Z"
+            fill="#fff" />
+        </svg>
+
+      </a>
+
+      <a href="https://github.com/HatamiDev">
+        <svg width="50" height="50" viewBox="0 0 1024 1024" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+            transform="scale(64)" fill="#FFFFFF" />
+        </svg>
+      </a>
+
+    </div>
+
+    <!-- FOOTER TEXT -->
+    <div class="max-w-7xl mx-auto mt-6 px-6 text-xs opacity-70 leading-relaxed">
+      <p>*Create With Love by <a href="www.mehranhatami.ir" target="_blank"
+          class="hover:opacity-100 transition text-yellow-400">Mehran Hatami</a></p>
+      <p>*For Renault brands</p>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <script src="./swiper.js"></script>
+</body>
+
+</html>
