@@ -24,82 +24,118 @@
 <body class="bg-black text-white">
 
   <!-- ================= NAVBAR ================= -->
-<header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-    <!-- logo -->
-    <div class="flex items-center gap-3">
-      <svg id="renaultLogo" viewBox="0 0 66 86" class="w-16 h-16 fill-white transition-all duration-300">
-        <path
-          d="m52.3 43-23 43H23L0 43 22.9 0h6.5L6.5 43l19.6 36.9L45.7 43 34.3 21.5l3.3-6.1L52.3 43zM42.5 0h-6.6L13.1 43l14.7 27.6 3.2-6.1L19.6 43 39.2 6l19.6 37-22.9 43h6.6l22.8-43L42.5 0z">
-        </path>
-      </svg>
-      <span class="text-2xl font-bold tracking-wide text-white">RENAULT</span>
+      <!-- logo -->
+      <div class="flex items-center gap-3">
+        <svg id="renaultLogo" viewBox="0 0 66 86" class="w-16 h-16 fill-white transition-all duration-300">
+          <path
+            d="m52.3 43-23 43H23L0 43 22.9 0h6.5L6.5 43l19.6 36.9L45.7 43 34.3 21.5l3.3-6.1L52.3 43zM42.5 0h-6.6L13.1 43l14.7 27.6 3.2-6.1L19.6 43 39.2 6l19.6 37-22.9 43h6.6l22.8-43L42.5 0z">
+          </path>
+        </svg>
+        <span class="text-2xl font-bold tracking-wide text-white">RENAULT</span>
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden lg:flex items-center gap-10 text-sm font-light capitalize text-white">
+        <a class="hover:text-yellow-400 transition">vehicles</a>
+        <a class="hover:text-yellow-400 transition">Your profession, our solutions</a>
+        <a class="hover:text-yellow-400 transition">purchase</a>
+        <a class="hover:text-yellow-400 transition">maintenance & services</a>
+      </nav>
+
+      <!-- ICONS DESKTOP -->
+      <div class="hidden lg:flex items-center gap-8 text-white">
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M15.51 4.055a8.105 8.105 0 0 1 .625 11.23l5.79 5.79-.85.85-5.79-5.79a8.105 8.105 0 1 1 .224-12.08zM10 3.1a6.9 6.9 0 1 0 0 13.8 6.9 6.9 0 0 0 0-13.8"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Search</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path
+                d="M13.9 6h1.2V5A2.965 2.965 0 0 0 12 1.9 2.965 2.965 0 0 0 8.9 5v1h1.2V5A1.765 1.765 0 0 1 12 3.1 1.765 1.765 0 0 1 13.9 5z"
+                fill="#FFFFFF"></path>
+              <path fill-rule="evenodd"
+                d="M3.81 22.1 6 6.9h12l2.19 15.2zm14.45-5.2L17 8.1H7l-1.24 8.8zm-13.07 4 .4-2.8h12.82l.4 2.8z"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Shop</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M12 12.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2M9.6 9a2.4 2.4 0 1 1 4.8 0 2.4 2.4 0 0 1-4.8 0"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+              <path fill-rule="evenodd"
+                d="m11.03 22.875.18.225h1.58l.18-.225C17.7 16.96 20.1 12.29 20.1 9A8.1 8.1 0 0 0 3.9 9c0 3.29 2.4 7.96 7.13 13.875M18.9 9c0 2.97-2.25 7.31-6.69 12.9h-.42C7.35 16.31 5.1 11.97 5.1 9a6.9 6.9 0 0 1 13.8 0"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Location</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M11.37 22.105h1.26l1.24-2.505 6.09.045A2.145 2.145 0 0 0 22.1 17.5V4.04a2.145 2.145 0 0 0-2.14-2.145H4.04A2.145 2.145 0 0 0 1.9 4.04V17.5a2.15 2.15 0 0 0 2.145 2.145l6.085-.04zM12 20.67l-1.13-2.275-6.83.05a.945.945 0 0 1-.94-.945V4.04c0-.52.42-.942.94-.945h15.92c.52.003.94.425.94.945V17.5a.945.945 0 0 1-.94.94l-6.83-.045z"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>Contact</span>
+        </div>
+
+        <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
+          <span class="text-lg">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              viewBox="0 0 24 24" class="MainHeaderV2__buttonIcon" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M17.35 6.745A5.06 5.06 0 0 1 14.95 11c3.945 1.03 6.15 4.275 6.15 9.245v1.5h-1.2v-1.5c0-7.31-4.95-8.4-7.9-8.4s-7.9 1.09-7.9 8.4v1.5H2.9v-1.5C2.9 15.27 5.105 12 9.05 11a5.06 5.06 0 0 1-2.4-4.25A5.235 5.235 0 0 1 12 1.65a5.235 5.235 0 0 1 5.35 5.095M12 2.85a4.035 4.035 0 0 0-4.15 3.9 4.035 4.035 0 0 0 4.15 3.9 4.035 4.035 0 0 0 4.15-3.9A4.035 4.035 0 0 0 12 2.85"
+                clip-rule="evenodd" fill="#FFFFFF"></path>
+            </svg></span>
+          <span>My Renault</span>
+        </div>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="menuBtn" class="lg:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+
     </div>
 
-    <!-- DESKTOP MENU -->
-    <nav class="hidden lg:flex items-center gap-10 text-sm font-light capitalize text-white">
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+      class="lg:hidden hidden flex-col bg-black/90 backdrop-blur px-6 py-6 space-y-6 text-white text-lg capitalize">
+
       <a class="hover:text-yellow-400 transition">vehicles</a>
       <a class="hover:text-yellow-400 transition">Your profession, our solutions</a>
       <a class="hover:text-yellow-400 transition">purchase</a>
       <a class="hover:text-yellow-400 transition">maintenance & services</a>
-    </nav>
 
-    <!-- ICONS DESKTOP -->
-    <div class="hidden lg:flex items-center gap-8 text-white">
-      <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
-        <span class="text-lg">🔍</span>
-        <span>Search</span>
-      </div>
+      <hr class="border-white/20">
 
-      <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
-        <span class="text-lg">🛒</span>
-        <span>Shop</span>
-      </div>
-
-      <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
-        <span class="text-lg">📍</span>
-        <span>Location</span>
-      </div>
-
-      <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
-        <span class="text-lg">📞</span>
-        <span>Contact</span>
-      </div>
-
-      <div class="flex flex-col items-center text-xs font-light cursor-pointer hover:text-yellow-400 transition">
-        <span class="text-lg">👤</span>
-        <span>My Renault</span>
+      <div class="flex flex-col gap-4 text-base">
+        <a class="hover:text-yellow-400 transition">Search</a>
+        <a class="hover:text-yellow-400 transition">Shop</a>
+        <a class="hover:text-yellow-400 transition">Location</a>
+        <a class="hover:text-yellow-400 transition">Contact</a>
+        <a class="hover:text-yellow-400 transition">My Renault</a>
       </div>
     </div>
-
-    <!-- MOBILE HAMBURGER -->
-    <button id="menuBtn" class="lg:hidden text-white text-3xl focus:outline-none">
-      ☰
-    </button>
-
-  </div>
-
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu"
-       class="lg:hidden hidden flex-col bg-black/90 backdrop-blur px-6 py-6 space-y-6 text-white text-lg capitalize">
-
-    <a class="hover:text-yellow-400 transition">vehicles</a>
-    <a class="hover:text-yellow-400 transition">Your profession, our solutions</a>
-    <a class="hover:text-yellow-400 transition">purchase</a>
-    <a class="hover:text-yellow-400 transition">maintenance & services</a>
-
-    <hr class="border-white/20">
-
-    <div class="flex flex-col gap-4 text-base">
-      <a class="hover:text-yellow-400 transition">Search</a>
-      <a class="hover:text-yellow-400 transition">Shop</a>
-      <a class="hover:text-yellow-400 transition">Location</a>
-      <a class="hover:text-yellow-400 transition">Contact</a>
-      <a class="hover:text-yellow-400 transition">My Renault</a>
-    </div>
-  </div>
-</header>
+  </header>
 
 
 
@@ -221,18 +257,18 @@
 
 
 
-  <!-- ویدیو پس‌زمینه -->
+
   <video id="bgVideo" class="fixed inset-0 w-full h-full object-cover -z-10 transition-opacity duration-500" autoplay
     muted loop playsinline>
   </video>
 
-  <!-- اوورلی -->
+
   <div class="fixed inset-0 bg-black/40 -z-10"></div>
 
-  <!-- کانتینر سکشن‌ها -->
+
   <div class="relative w-full">
 
-    <!-- سکشن ۱ -->
+    <!-- video 1-->
     <section class="min-h-screen flex items-start justify-end pr-24 pt-40" data-video="videos/1scrol.mp4">
       <div class="section-content sticky top-40 transition-all duration-500">
         <h2 class="text-5xl font-bold mb-4 section-title opacity-100">Electrified E-Tech drives</h2>
@@ -243,7 +279,7 @@
       </div>
     </section>
 
-    <!-- سکشن ۲ -->
+    <!-- video 2 -->
     <section class="min-h-screen flex items-start justify-end pr-24 pt-40" data-video="./videos/2scrol.mp4">
       <div class="section-content sticky top-40 transition-all duration-500">
         <h2 class="text-5xl font-bold mb-4 section-title opacity-40">OpenR link with Google integration</h2>
@@ -254,7 +290,7 @@
       </div>
     </section>
 
-    <!-- سکشن ۳ -->
+    <!-- video3-->
     <section class="min-h-screen flex items-start justify-end pr-24 pt-40" data-video="./videos/3scrol.mp4">
       <div class="section-content sticky top-40 transition-all duration-500">
         <h2 class="text-5xl font-bold mb-4 section-title opacity-40">"Human First" program, safety by Renault</h2>
