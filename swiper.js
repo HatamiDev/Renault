@@ -4,19 +4,23 @@
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      header.classList.add("bg-black/40", "backdrop-blur-md", "py-2");
-      header.classList.remove("py-4");
-
-      logo.classList.remove("w-20", "h-20");
-      logo.classList.add("w-10", "h-10");
+      header.classList.add("header-scrolled");
     } else {
-      header.classList.remove("bg-black/40", "backdrop-blur-md", "py-2");
-      header.classList.add("py-4");
-
-      logo.classList.remove("w-10", "h-10");
-      logo.classList.add("w-20", "h-20");
+      header.classList.remove("header-scrolled");
     }
   });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+
+
+
+
 
 
 

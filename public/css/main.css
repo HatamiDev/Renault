@@ -2,6 +2,29 @@
 @plugin "daisyui";
 @import 'animate.css';
 
+
+
+ 
+
+  #mainHeader {
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+
+  #mainHeader.header-scrolled {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+  }
+
+  #mainHeader.header-scrolled #renaultLogo {
+    width: 40px;
+    height: 40px;
+  }
+
+
+
+
 .swiper-pagination {
     display: flex;
     justify-content: center;
