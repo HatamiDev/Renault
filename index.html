@@ -142,51 +142,65 @@
 
 
 
-  <section class="relative w-full h-screen overflow-hidden">
+<section class="relative w-full h-screen overflow-hidden">
 
-    <div class="swiper mySwiper w-full h-full">
+  <div class="swiper mySwiper w-full h-full">
 
-      <div class="swiper-wrapper ">
+    <div class="swiper-wrapper">
 
-        <div class="swiper-slide " data-title="RENAULT PRO+ GENERATION " data-desc="Custom-built commercial vehicles">
-          <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-            <source src="./image/e797a3a1cb.mp4" type="video/mp4" />
-          </video>
-        </div>
-
-        <div class="swiper-slide" data-title="NEW CLIO" data-desc="The next generation of urban mobility">
-          <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-            <source src="./image/ed0d579da0.mp4" type="video/mp4" />
-          </video>
-        </div>
-
-        <div class="swiper-slide" data-title="ELECTRIC RANGE" data-desc="Drive the future with zero emissions">
-          <img src="./image/1.png" class="w-full h-full object-cover" />
-        </div>
-
-        <div class="swiper-slide" data-title="FISCALITY 2026" data-desc="New regulations for business vehicles">
-          <img src="./image/2.png" class="w-full h-full object-cover" />
-        </div>
-
+      <div class="swiper-slide" data-title="RENAULT GENERATION" data-desc="Electric range on Paris">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="./image/e797a3a1cb.mp4" type="video/mp4" />
+        </video>
       </div>
 
-      <div class="swiper-button-next text-white"></div>
-      <div class="swiper-button-prev text-white"></div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-slide" data-title="NEW CLIO" data-desc="The next generation of urban mobility">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="./image/ed0d579da0.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="swiper-slide" data-title="ELECTRIC RANGE" data-desc="Drive the future with zero emissions">
+        <img src="./image/1.png" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="swiper-slide" data-title="FISCALITY 2026" data-desc="New regulations for business vehicles">
+        <img src="./image/2.png" class="w-full h-full object-cover" />
+      </div>
 
     </div>
 
-    <!-- متن  -->
-    <div id="sliderText" class="absolute z-20 top-1/3 left-10 max-w-xl transition-all duration-500">
-      <p id="sliderTitle" class="text-sm tracking-widest uppercase opacity-90 ml-20"></p>
-      <h1 id="sliderDesc" class="text-3xl md:text-5xl font-semibold leading-tight mt-3 ml-20"></h1>
-      <button
-        class="btn bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 mt-6 ml-20 capitalize">
-        discover
-      </button>
-    </div>
+    <!-- arrows (desktop only) -->
+    <div class="swiper-button-next text-white hidden md:flex"></div>
+    <div class="swiper-button-prev text-white hidden md:flex"></div>
 
-  </section>
+    <!-- pagination -->
+    <div class="swiper-pagination flex justify-center items-center gap-6 md:gap-32 !bottom-6"></div>
+
+  </div>
+
+  <!-- TEXT -->
+  <div id="sliderText"
+       class="absolute z-20 top-[28%] left-4 md:left-12 max-w-[260px] md:max-w-xl transition-all duration-500">
+
+    <p id="sliderTitle"
+       class="text-[10px] md:text-sm tracking-widest uppercase opacity-90 ml-1 md:ml-20"></p>
+
+    <h1 id="sliderDesc"
+        class="text-lg md:text-5xl font-semibold leading-snug md:leading-tight mt-2 md:mt-3 ml-1 md:ml-20"></h1>
+
+    <button
+      class="btn bg-yellow-400 text-black font-semibold px-3 py-2 md:px-6 md:py-3 rounded-full hover:bg-yellow-300 mt-4 md:mt-6 ml-1 md:ml-20 capitalize">
+      discover
+    </button>
+
+  </div>
+
+</section>
+
+
+
+
 
 
 

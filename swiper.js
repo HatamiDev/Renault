@@ -29,53 +29,74 @@
 
 
 
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      const labels = [
-        "RENAULT GENERATION",
-        "NEW CLIO",
-        "ELECTRICAL RANGE",
-        "TAXATION 2026"
-      ];
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
 
-      return `
-        <span class="${className}">
-          <div class="bullet-item">
-            <div class="bullet-line"></div>
-            <span class="bullet-label">${labels[index]}</span>
-          </div>
-        </span>
-      `;
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-  },
 
- 
-  on: {
-    init: function () {
-      updateSlideText(this.slides[this.activeIndex]);
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+
+      renderBullet: function (index, className) {
+        const labels = [
+          "RENAULT GENERATION",
+          "NEW CLIO",
+          "ELECTRIC RANGE",
+          "TAXATION 2026"
+        ];
+
+        return `
+          <span class="${className} flex flex-col items-center cursor-pointer">
+            <div class="bullet-line w-14 md:w-40 h-[2px] bg-white/40 transition-all duration-300"></div>
+            <span class="bullet-label mt-1 text-[9px] md:text-xs text-white opacity-70 whitespace-nowrap">
+              ${labels[index]}
+            </span>
+          </span>
+        `;
+      },
     },
-    slideChange: function () {
-      updateSlideText(this.slides[this.activeIndex]);
+
+    on: {
+      init: function () {
+        updateSlideText(this.slides[this.activeIndex]);
+        updateBullets();
+      },
+      slideChange: function () {
+        updateSlideText(this.slides[this.activeIndex]);
+        updateBullets();
+      }
+    }
+  });
+
+  function updateSlideText(slide) {
+    const title = slide.getAttribute("data-title");
+    const desc = slide.getAttribute("data-desc");
+
+    document.getElementById("sliderTitle").textContent = title;
+    document.getElementById("sliderDesc").textContent = desc;
+  }
+
+  // فعال کردن حالت active فقط با Tailwind
+  function updateBullets() {
+    document.querySelectorAll(".swiper-pagination-bullet").forEach((b) => {
+      b.querySelector(".bullet-line").classList.remove("bg-white", "h-[3px]");
+      b.querySelector(".bullet-line").classList.add("bg-white/40", "h-[2px]");
+      b.querySelector(".bullet-label").classList.add("opacity-70");
+    });
+
+    const active = document.querySelector(".swiper-pagination-bullet-active");
+    if (active) {
+      active.querySelector(".bullet-line").classList.remove("bg-white/40", "h-[2px]");
+      active.querySelector(".bullet-line").classList.add("bg-white", "h-[3px]");
+      active.querySelector(".bullet-label").classList.remove("opacity-70");
     }
   }
-});
 
-function updateSlideText(slide) {
-  const title = slide.getAttribute("data-title");
-  const desc = slide.getAttribute("data-desc");
-
-  document.getElementById("sliderTitle").textContent = title;
-  document.getElementById("sliderDesc").textContent = desc;
-}
 
 
 
